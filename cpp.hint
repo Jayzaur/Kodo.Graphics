@@ -1,0 +1,5 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define GRAPHICS_OBJECT(managed_type, native_type) internal: property native_type* Native { native_type* get() { return static_cast<native_type*>( _native ); } } managed_type( native_type* n ) { _native = n; }
+#define FAILED(hr) (((HRESULT)(hr)) < 0)
